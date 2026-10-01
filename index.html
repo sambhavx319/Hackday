@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,441 +12,290 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
 
         <div class="logo">
             <span>⚡</span>
             SmartFix
         </div>
 
-        <nav>
+        <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
-            <a href="#how-it-works">How It Works</a>
-        </nav>
+            <a href="#providers">Providers</a>
+            <a href="#how">How It Works</a>
+        </div>
 
-    </header>
+    </nav>
 
 
-    <main>
+    <!-- ================= HERO ================= -->
 
-        <!-- HERO -->
-        <section class="hero" id="home">
+    <section class="hero" id="home">
 
-            <div class="hero-content">
+        <div class="hero-content">
 
-                <div class="badge">
-                    ⚡ Everyday Problem, Smart Solution
-                </div>
+            <span class="badge">EVERYDAY PROBLEM, SMART SOLUTION</span>
 
-                <h1>
-                    Got a problem?
-                    <span>We'll find the right help.</span>
-                </h1>
+            <h1>
+                Got a Problem?
+                <span>We've Got a Fix.</span>
+            </h1>
+
+            <p>
+                Tell SmartFix what's wrong and we'll help you
+                find the right service professional.
+            </p>
+
+            <div class="problem-search">
+
+                <textarea
+                    id="problemInput"
+                    placeholder="Example: My tap is leaking, my laptop is not working..."
+                ></textarea>
+
+                <button id="findHelpBtn">
+                    🔎 Find Help
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" id="services">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+                🛠️ OUR SERVICES
+            </span>
+
+            <h2>What do you need help with?</h2>
+
+            <p>
+                Choose a service or tell Sajilo Sathi about your problem.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <button class="service-btn" data-service="Plumber">
+                <span>🔧</span>
+                <strong>Plumber</strong>
+                <small>Leaks, pipes & water</small>
+            </button>
+
+            <button class="service-btn" data-service="Electrician">
+                <span>⚡</span>
+                <strong>Electrician</strong>
+                <small>Electrical problems</small>
+            </button>
+
+            <button class="service-btn" data-service="Computer & Laptop">
+                <span>💻</span>
+                <strong>Computer & Laptop</strong>
+                <small>PC & laptop problems</small>
+            </button>
+
+            <button class="service-btn" data-service="Mobile Repair">
+                <span>📱</span>
+                <strong>Mobile Repair</strong>
+                <small>Phone problems</small>
+            </button>
+
+            <button class="service-btn" data-service="Locksmith">
+                <span>🔐</span>
+                <strong>Locksmith</strong>
+                <small>Locks & keys</small>
+            </button>
+
+            <button class="service-btn" data-service="Cleaning Service">
+                <span>🧹</span>
+                <strong>Cleaning</strong>
+                <small>Home & office cleaning</small>
+            </button>
+
+            <button class="service-btn" data-service="AC / Fridge Technician">
+                <span>❄️</span>
+                <strong>AC / Fridge</strong>
+                <small>Cooling problems</small>
+            </button>
+
+            <button class="service-btn" data-service="Vehicle Service">
+                <span>🏍️</span>
+                <strong>Vehicle Service</strong>
+                <small>Car & bike problems</small>
+            </button>
+
+            <button class="service-btn" data-service="Carpenter">
+                <span>🪚</span>
+                <strong>Carpenter</strong>
+                <small>Furniture & woodwork</small>
+            </button>
+
+            <button class="service-btn" data-service="Painter">
+                <span>🎨</span>
+                <strong>Painter</strong>
+                <small>Walls & painting</small>
+            </button>
+
+            <button class="service-btn" data-service="Gardener">
+                <span>🌱</span>
+                <strong>Gardener</strong>
+                <small>Plants & gardens</small>
+            </button>
+
+            <button class="service-btn" data-service="Moving / Delivery">
+                <span>📦</span>
+                <strong>Moving / Delivery</strong>
+                <small>Move & deliver items</small>
+            </button>
+
+            <button class="service-btn" data-service="General Handyman">
+                <span>🛠️</span>
+                <strong>Handyman</strong>
+                <small>General repairs</small>
+            </button>
+
+            <button class="service-btn" data-service="Home Repair">
+                <span>🏠</span>
+                <strong>Home Repair</strong>
+                <small>House problems</small>
+            </button>
+
+            <button class="service-btn" data-service="Appliance Repair">
+                <span>🔨</span>
+                <strong>Appliance Repair</strong>
+                <small>Home appliances</small>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROVIDERS ================= -->
+
+    <section class="providers-section" id="providers">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+                🔎 SMART MATCH
+            </span>
+
+            <h2 id="providerTitle">
+                Service Providers
+            </h2>
+
+            <p id="providerSubtitle">
+                Choose a service to find providers.
+            </p>
+
+        </div>
+
+        <div class="provider-grid" id="providerGrid"></div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-section" id="how">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+                🚀 SIMPLE PROCESS
+            </span>
+
+            <h2>How SmartFix Works</h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">1</div>
+
+                <h3>Tell Us</h3>
 
                 <p>
-                    Describe your everyday problem and discover the right
-                    service provider near you.
-                </p>
-
-                <div class="problem-box">
-
-                    <textarea
-                        id="problemInput"
-                        placeholder="Example: My tap is leaking..."
-                    ></textarea>
-
-                    <button id="findHelpBtn">
-                        Find Help →
-                    </button>
-
-                </div>
-
-                <p class="hint">
-                    💡 Describe your problem and SmartFix will suggest a service.
+                    Describe your everyday problem.
                 </p>
 
             </div>
 
-        </section>
 
+            <div class="step">
 
-        <!-- SERVICES -->
-        <section class="services" id="services">
+                <div class="step-number">2</div>
 
-            <div class="section-header">
-
-                <span class="section-badge">
-                    🛠️ OUR SERVICES
-                </span>
-
-                <h2>
-                    What do you need help with?
-                </h2>
+                <h3>Get Matched</h3>
 
                 <p>
-                    Choose a service category for your everyday problem.
+                    SmartFix identifies the right service.
                 </p>
 
             </div>
 
 
-            <div class="service-grid">
+            <div class="step">
 
-                <!-- 1 -->
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
+                <div class="step-number">3</div>
 
-                    <h3>Electrician</h3>
+                <h3>Contact</h3>
 
-                    <p>
-                        Wiring, fans, lights and power issues
-                    </p>
-
-                    <button class="service-btn" data-service="Electrician">
-                        Find Electrician →
-                    </button>
-                </div>
-
-
-                <!-- 2 -->
-                <div class="service-card">
-                    <div class="service-icon">🚰</div>
-
-                    <h3>Plumber</h3>
-
-                    <p>
-                        Leaks, taps, pipes and water systems
-                    </p>
-
-                    <button class="service-btn" data-service="Plumber">
-                        Find Plumber →
-                    </button>
-                </div>
-
-
-                <!-- 3 -->
-                <div class="service-card">
-                    <div class="service-icon">🔌</div>
-
-                    <h3>Electronics Repair</h3>
-
-                    <p>
-                        TV, refrigerator, washing machine and appliances
-                    </p>
-
-                    <button class="service-btn" data-service="Electronics Repair">
-                        Find Technician →
-                    </button>
-                </div>
-
-
-                <!-- 4 -->
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-
-                    <h3>Computer & Laptop</h3>
-
-                    <p>
-                        Hardware, software and computer problems
-                    </p>
-
-                    <button class="service-btn" data-service="Computer & Laptop">
-                        Find Technician →
-                    </button>
-                </div>
-
-
-                <!-- 5 -->
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-
-                    <h3>Mobile Repair</h3>
-
-                    <p>
-                        Screen, battery, charging and software problems
-                    </p>
-
-                    <button class="service-btn" data-service="Mobile Repair">
-                        Find Repair Shop →
-                    </button>
-                </div>
-
-
-                <!-- 6 -->
-                <div class="service-card">
-                    <div class="service-icon">🔑</div>
-
-                    <h3>Locksmith</h3>
-
-                    <p>
-                        Lost keys, broken locks and door lock installation
-                    </p>
-
-                    <button class="service-btn" data-service="Locksmith">
-                        Find Locksmith →
-                    </button>
-                </div>
-
-
-                <!-- 7 -->
-                <div class="service-card">
-                    <div class="service-icon">🧹</div>
-
-                    <h3>Cleaning Service</h3>
-
-                    <p>
-                        Home, bathroom, kitchen and deep cleaning
-                    </p>
-
-                    <button class="service-btn" data-service="Cleaning Service">
-                        Find Cleaner →
-                    </button>
-                </div>
-
-
-                <!-- 8 -->
-                <div class="service-card">
-                    <div class="service-icon">❄️</div>
-
-                    <h3>AC / Fridge Technician</h3>
-
-                    <p>
-                        AC servicing, gas refill and cooling problems
-                    </p>
-
-                    <button class="service-btn" data-service="AC / Fridge Technician">
-                        Find Technician →
-                    </button>
-                </div>
-
-
-                <!-- 9 -->
-                <div class="service-card">
-                    <div class="service-icon">🏍️</div>
-
-                    <h3>Vehicle Service</h3>
-
-                    <p>
-                        Bike, car repair, puncture and battery service
-                    </p>
-
-                    <button class="service-btn" data-service="Vehicle Service">
-                        Find Mechanic →
-                    </button>
-                </div>
-
-
-                <!-- 10 -->
-                <div class="service-card">
-                    <div class="service-icon">🪑</div>
-
-                    <h3>Carpenter</h3>
-
-                    <p>
-                        Furniture, doors, windows and custom woodwork
-                    </p>
-
-                    <button class="service-btn" data-service="Carpenter">
-                        Find Carpenter →
-                    </button>
-                </div>
-
-
-                <!-- 11 -->
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-
-                    <h3>Painter</h3>
-
-                    <p>
-                        Room, wall and house painting services
-                    </p>
-
-                    <button class="service-btn" data-service="Painter">
-                        Find Painter →
-                    </button>
-                </div>
-
-
-                <!-- 12 -->
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-
-                    <h3>Home Maintenance</h3>
-
-                    <p>
-                        Roof, wall, tile and general home maintenance
-                    </p>
-
-                    <button class="service-btn" data-service="Home Maintenance">
-                        Find Service →
-                    </button>
-                </div>
-
-
-                <!-- 13 -->
-                <div class="service-card">
-                    <div class="service-icon">🌱</div>
-
-                    <h3>Gardener</h3>
-
-                    <p>
-                        Garden maintenance, plants and landscaping
-                    </p>
-
-                    <button class="service-btn" data-service="Gardener">
-                        Find Gardener →
-                    </button>
-                </div>
-
-
-                <!-- 14 -->
-                <div class="service-card">
-                    <div class="service-icon">🚚</div>
-
-                    <h3>Moving / Delivery</h3>
-
-                    <p>
-                        House shifting, furniture transport and delivery
-                    </p>
-
-                    <button class="service-btn" data-service="Moving / Delivery">
-                        Find Service →
-                    </button>
-                </div>
-
-
-                <!-- 15 -->
-                <div class="service-card">
-                    <div class="service-icon">🛠️</div>
-
-                    <h3>General Handyman</h3>
-
-                    <p>
-                        Small household jobs and everyday repair work
-                    </p>
-
-                    <button class="service-btn" data-service="General Handyman">
-                        Find Handyman →
-                    </button>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROVIDERS -->
-        <section class="providers-section" id="providers">
-
-            <div class="section-header">
-
-                <span class="section-badge">
-                    🔎 SMART MATCH
-                </span>
-
-                <h2 id="providerTitle">
-                    Service Providers
-                </h2>
-
-                <p id="providerSubtitle">
-                    Choose a service to find providers.
+                <p>
+                    Choose a provider and contact them.
                 </p>
 
             </div>
 
+        </div>
 
-            <div class="provider-grid" id="providerGrid"></div>
-
-        </section>
-
-
-        <!-- HOW IT WORKS -->
-        <section class="how-section" id="how-it-works">
-
-            <div class="section-heading">
-
-                <span>
-                    HOW IT WORKS
-                </span>
-
-                <h2>
-                    Simple. Fast. Smart.
-                </h2>
-
-            </div>
+    </section>
 
 
-            <div class="steps">
+    <!-- ================= FOOTER ================= -->
 
-                <div class="step">
+    <footer>
 
-                    <div class="step-number">
-                        01
-                    </div>
+        <div class="footer-logo">
+            ⚡ SmartFix
+        </div>
 
-                    <h3>
-                        Describe
-                    </h3>
+        <p>
+            Everyday Problem, Smart Solution.
+        </p>
 
-                    <p>
-                        Tell us what problem you are facing.
-                    </p>
+        <p class="copyright">
+            © 2026 SmartFix. HackDay Project.
+        </p>
 
-                </div>
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        02
-                    </div>
-
-                    <h3>
-                        Match
-                    </h3>
-
-                    <p>
-                        Find the right type of service provider.
-                    </p>
-
-                </div>
+    </footer>
 
 
-                <div class="step">
+    <!-- ================= PROVIDER MODAL ================= -->
 
-                    <div class="step-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Request
-                    </h3>
-
-                    <p>
-                        Connect with a nearby service provider.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- PROVIDER DETAILS MODAL -->
     <div class="modal" id="providerModal">
 
         <div class="modal-content">
 
             <button
                 class="close-modal"
-                id="closeModal"
-            >
+                id="closeModal">
                 ×
             </button>
 
@@ -456,17 +306,128 @@
     </div>
 
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- ================================================= -->
+    <!-- SAJILO SATHI CHATBOT -->
+    <!-- ================================================= -->
 
-        <p>
-            © 2026 SmartFix · Everyday Problem, Smart Solution
-        </p>
+    <div class="sajilo-container">
 
-    </footer>
+        <button
+            id="chatButton"
+            class="chat-button"
+            type="button">
 
+            💬
+
+        </button>
+
+
+        <div
+            id="chatWindow"
+            class="chat-window">
+
+            <div class="chat-header">
+
+                <div>
+
+                    <strong>
+                        🤝 Sajilo Sathi
+                    </strong>
+
+                    <small>
+                        SmartFix Assistant
+                    </small>
+
+                </div>
+
+                <button
+                    id="closeChat"
+                    type="button">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="chatMessages"
+                class="chat-messages">
+
+                <div class="chat-message bot-message">
+
+                    👋 Hi! I'm <strong>Sajilo Sathi</strong>.
+
+                    <br><br>
+
+                    Tell me what's wrong and I'll help you
+                    find the right SmartFix service.
+
+                    <br><br>
+
+                    Try:
+                    <br>
+                    • My tap is leaking
+                    <br>
+                    • I need delivery
+                    <br>
+                    • My bike won't start
+                    <br>
+                    • My laptop is not working
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-buttons">
+
+                <button
+                    class="quick-chat-btn"
+                    type="button">
+                    🔧 Plumbing problem
+                </button>
+
+                <button
+                    class="quick-chat-btn"
+                    type="button">
+                    📦 I need delivery
+                </button>
+
+                <button
+                    class="quick-chat-btn"
+                    type="button">
+                    💻 Laptop problem
+                </button>
+
+            </div>
+
+
+            <div class="chat-input-area">
+
+                <input
+                    id="chatInput"
+                    type="text"
+                    placeholder="Describe your problem..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="sendChat"
+                    type="button">
+                    ➤
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMPORTANT: SCRIPT IS AT THE VERY END -->
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
